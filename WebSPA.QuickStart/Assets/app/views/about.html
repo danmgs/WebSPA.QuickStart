@@ -1,0 +1,15 @@
+<p>This is the about view.</p>
+
+
+<div class="btn btn-primary" ng-click="vm.insertCarsData()" ng-show="vm.countData > 0">insertCarDatas</div>
+<input type="text" ng-model="vm.countData" />
+
+<div class="btn btn-primary" ng-click="vm.getAllCars()">getAllCars</div>
+
+
+
+<pre>{{vm.cars}}</pre>
+<div ng-repeat="car in vm.cars">
+    {{car.Color}} - {{car.MaxSpeed}}<br/>
+</div>
+
