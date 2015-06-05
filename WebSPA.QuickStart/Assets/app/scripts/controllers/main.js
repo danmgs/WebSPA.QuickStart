@@ -35,7 +35,6 @@
         activate();
 
         function activate() {
-            alert("toto");
         }
     }
 })();

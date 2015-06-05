@@ -14,11 +14,20 @@
 
     function dataService($http) {
 
+        var deleteAllCars = function () {
+            return $http.get(hostapi + '/api/Garage/DeleteAllCars')
+                .success(function (dto) {
+                    alert('success deleteAllCars');
+                })
+                .error(function (err) {
+                    alert('error deleteAllCars : ' + JSON.stringify(err));
+                });
+        };
+
         var getAllCars = function (count) {
-		    alert(hostapi);
             return $http.get(hostapi + '/api/Garage/GetAllCars')
                 .success(function (dto) {
-                    alert('success getAllCars');
+                    //alert('success getAllCars');
                 })
                 .error(function (err) {
                     alert('error getAllCars : ' + JSON.stringify(err));
@@ -28,7 +37,7 @@
         var getData = function (count) {
             return $http.get(hostapi + '/api/Values/GetData' + '?count=' + count)
                 .success(function (dto) {
-                    alert('success getData');
+                    //alert('success getData');
                 })
                 .error(function (err) {
                     alert('error getData : ' + JSON.stringify(err));
@@ -36,9 +45,10 @@
         };
 
         var insertCarsData = function (count) {
-            return $http.post(hostapi + '/api/Garage/InsertCarsData' + '?count=' + count)
+            //alert(hostapi + '/api/Garage/InsertCarsData' + '?count=' + count);
+            return $http.get(hostapi + '/api/Garage/InsertCarsData' + '?count=' + count)
                 .success(function (dto) {
-                    alert('success insertCarsData');
+                    //alert('success insertCarsData');
                 })
                 .error(function (err) {
                     alert('error insertCarsData : ' + JSON.stringify(err));
@@ -46,6 +56,7 @@
         };
 
         var service = {
+            deleteAllCars: deleteAllCars,
             getAllCars: getAllCars,
             getData: getData,
             insertCarsData: insertCarsData
