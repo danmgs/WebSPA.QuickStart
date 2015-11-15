@@ -9,9 +9,9 @@
     'use strict';
 
     var controllerId = 'AboutCtrl';
-    angular.module('assetsApp').controller(controllerId, ['$scope', '$http', 'dataService', AboutController]);
+    angular.module('assetsApp').controller(controllerId, ['$scope', '$http', 'carService', AboutController]);
 
-    function AboutController($scope, $http, dataService) {
+    function AboutController($scope, $http, carService) {
         var vm = this;
 
         vm.title = "AboutCtrl";
@@ -35,17 +35,19 @@
             //    });                
             //});
 
-            dataService.deleteAllCars().then(function (res) {
+            carService.deleteAllCars().then(function (res) {
                     vm.gridData = [];
             });            
         };
 
         vm.getAllCars = function () {
-            dataService.getAllCars();
+            carService.getAllCars().then(function (res) {
+                vm.gridData = res.data;
+            });
         };
 
         vm.insertCarsData = function () {
-            dataService.insertCarsData(vm.countData).then(function (res) {
+            carService.insertCarsData(vm.countData).then(function (res) {
                 vm.gridData = res.data;
             });
         };

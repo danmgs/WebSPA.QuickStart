@@ -7,20 +7,27 @@ namespace WebSPA.QuickStart
 {
 	public class MongoDbContext
 	{
-        public MongoDatabase Database { get; private set; }
+        public IMongoDatabase Database { get; private set; }
 
         public MongoDbContext()
         {
             var client = new MongoClient(AppSettings.DbConnectionString);
-            var server = client.GetServer();
-            Database = server.GetDatabase(AppSettings.MongoDbDatabaseName) as MongoDatabase;
+            Database = client.GetDatabase(AppSettings.MongoDbDatabaseName);
         }
 
-        public MongoCollection<Car> Cars
+        public IMongoCollection<Car> Cars
         {
             get
             {
                 return Database.GetCollection<Car>("cars");
+            }
+        }
+
+        public IMongoCollection<Operation> Operations
+        {
+            get
+            {
+                return Database.GetCollection<Operation>("operation");
             }
         }
 	}

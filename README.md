@@ -1,35 +1,36 @@
 #WebSPA.QuickStart - 2015
-*Designed by [@Daniel NGUYEN](https://www.linkedin.com/in/nguyendaniel)*
-==================================
+> WebSPA.QuickStart is a simple Web Application using AngularJS and MongoDb.
 
-*Simple Web Application using AngularJS and MongoDb *
+## Prerequisites
 
-### SETUP
+* Install Nodejs
+* Launch noje.js console to install grunt-cli and bower, using command :
 
-> Pre-requisites: src may be copy in a short path in order to launch npm and bower.
+```
+npm install -g grunt-cli bower
+```
 
-> WEB Client - Go to WebSPA.QuickStart\Assets, type command:
+* MongoDB - Download and Install [MongoDB](http://www.mongodb.org/downloads) -
+
+
+## Installation
+
+**Retrieval and install client packages**
+
+This project was scaffolded with yeoman.
+> src code may be copy in a short path in order to install client packages required.
+
+> Go to directory WebSPA.QuickStart\Assets, type command:
 
 ```
 npm install  
 bower install  
 ```
 
-To launch the WEB Client:
+This will retrieve all the package needed by this WEB application.
 
-```
-grunt serve
-```
+**Launch the MongoDB Database**
 
-> WEB API - launch WEB API under VS with F5. Check the iis deployment url.
-
-> Configure global variable "hostapi" to fit this WEB API deployment url.
-
-```
-WebSPA.QuickStart\Assets\app\scripts\app.js
-```
-
-> MongoDB Database.
 Check the web.config 
 
 ```html
@@ -44,12 +45,42 @@ cd C:\Program Files\MongoDB\Server\3.0\bin
 mongod.exe --dbpath [\CustomMyDataPath]
 ```
 
-Database will be automatically create while using the application under the following name:
+While using the application, database will be automatically create under the name:
 ```html
 <add key="MongoDbDatabaseName" value="MongoDbDatabaseName" /> 
 ```
 
-### USEFUL LINKS
+## Launch the application
+
+> To launch the WEB application, in nodejs console, type the command:
+
+```
+grunt serve
+```
+
+> To launch the WEB API. Under VS with F5. Check the iis deployment url.
+
+> Configure global variable "myHostObject" to fit this WEB API deployment url.
+
+```
+WebSPA.QuickStart\Assets\app\scripts\app.js
+
+    .value('myHostObject', {
+        url: 'http://localhost:33652',
+        port: "33652"
+    });
+
+```
+
+## USEFUL LINKS
 
 www.pathtoolong.com
 https://github.com/angular-ui/bower-ui-grid
+http://docs.mongolab.com/languages/
+
+
+https://www.mongodb.com/blog/post/introducing-20-net-driver
+mongodb.github.io/mongo-csharp-driver/2.0/getting_started/quick_tour/
+https://github.com/mongolab/mongodb-driver-examples/blob/master/c%23/CSharpSimpleExample.cs
+https://github.com/mongolab/mongodb-driver-examples
+http://brianhann.com/6-ways-to-take-control-of-how-your-ui-grid-data-is-displayed/

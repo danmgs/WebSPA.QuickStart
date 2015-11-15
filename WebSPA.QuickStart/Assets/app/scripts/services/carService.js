@@ -1,6 +1,6 @@
 /**
  * @ngdoc service
- * @name assetsApp.dataService
+ * @name assetsApp.carService
  * @description
  * # dataService
  * Service in the assetsApp.
@@ -8,15 +8,15 @@
 (function () {
     'use strict';
 
-    var serviceId = 'dataService';
+    var serviceId = 'carService';
 
-    angular.module('assetsApp').factory(serviceId, ['$http', dataService]);
+    angular.module('assetsApp').factory(serviceId, ['$http', 'myHostObject', carService]);
 
-    function dataService($http) {
+    function carService($http, myHostObject) {
 
         var deleteAllCars = function () {
-            return $http.get(hostapi + '/api/Garage/DeleteAllCars')
-                .success(function (dto) {
+            return $http.get(myHostObject.url + '/api/Garage/DeleteAllCars')
+                .success(function () {
                     alert('success deleteAllCars');
                 })
                 .error(function (err) {
@@ -25,8 +25,8 @@
         };
 
         var getAllCars = function (count) {
-            return $http.get(hostapi + '/api/Garage/GetAllCars')
-                .success(function (dto) {
+            return $http.get(myHostObject.url + '/api/Garage/GetAllCars')
+                .success(function () {
                     //alert('success getAllCars');
                 })
                 .error(function (err) {
@@ -35,8 +35,8 @@
         };
 
         var getData = function (count) {
-            return $http.get(hostapi + '/api/Values/GetData' + '?count=' + count)
-                .success(function (dto) {
+            return $http.get(myHostObject.url + '/api/Values/GetData' + '?count=' + count)
+                .success(function () {
                     //alert('success getData');
                 })
                 .error(function (err) {
@@ -46,8 +46,8 @@
 
         var insertCarsData = function (count) {
             //alert(hostapi + '/api/Garage/InsertCarsData' + '?count=' + count);
-            return $http.get(hostapi + '/api/Garage/InsertCarsData' + '?count=' + count)
-                .success(function (dto) {
+            return $http.get(myHostObject.url + '/api/Garage/InsertCarsData' + '?count=' + count)
+                .success(function () {
                     //alert('success insertCarsData');
                 })
                 .error(function (err) {

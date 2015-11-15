@@ -9,9 +9,9 @@
     'use strict';
 
     var controllerId = 'MainCtrl';
-    angular.module('assetsApp').controller(controllerId, ['$scope', '$http', 'scrollService', 'dataService', MainController]);
+    angular.module('assetsApp').controller(controllerId, ['$scope', '$http', 'scrollService', 'carService', MainController]);
 
-    function MainController($scope, $http, scrollService, dataService) {
+    function MainController($scope, $http, scrollService, carService) {
         var vm = this;
 
         vm.title = "MainCtrl";
@@ -25,7 +25,7 @@
         vm.countData = 5;
 
         vm.getData = function () {
-            dataService.getData(vm.countData);
+            carService.getData(vm.countData);
         };
 
         vm.scrollTo = function (idElt) {
