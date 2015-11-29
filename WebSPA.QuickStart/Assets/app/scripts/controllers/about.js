@@ -52,9 +52,9 @@
             });
         };
 
-        activate();
+        function init() {
+        }
 
-        function activate() {
-         }
+        init();
     }
 })();

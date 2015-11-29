@@ -118,9 +118,9 @@
         //    console.log(points, evt);
         //};
 
-        activate();
+        function init() {
+        }
 
-        function activate() {
-         }
+        init();
     }
 })();

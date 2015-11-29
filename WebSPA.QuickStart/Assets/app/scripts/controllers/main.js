@@ -32,9 +32,9 @@
             scrollService.scrollTo(idElt);
         };
 
-        activate();
-
-        function activate() {
+        function init() {
         }
+
+        init();
     }
 })();

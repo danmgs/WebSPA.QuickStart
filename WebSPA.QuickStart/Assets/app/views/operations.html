@@ -2,6 +2,10 @@
 <div class="container">
 
     <div class="row">
+        This page use a WEB API Api to retrieve data. Ensure the Web server is started.
+    </div>
+
+    <div class="row voffset3">
         <div class="col-md-4 btn btn-primary" ng-click="vm.generateData()" ng-show="vm.countData > 0">Generate &amp; store random data</div>
         <div class="col-md-4"><input type="text" ng-model="vm.countData" /></div>
         <span ng-class="{'col-md-4 label label-success': vm.status, 'col-md-4 label label-danger': !vm.status}">{{vm.statuslbl}}</span>

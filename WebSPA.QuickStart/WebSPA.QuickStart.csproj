@@ -201,22 +201,34 @@
     <Content Include="Assets\.gitignore" />
     <Content Include="Assets\app\404.html" />
     <Content Include="Assets\app\favicon.ico" />
+    <Content Include="Assets\app\images\flag-germany.gif" />
+    <Content Include="Assets\app\images\flag-usa.gif" />
     <Content Include="Assets\app\images\yeoman.png" />
     <Content Include="Assets\app\index.html" />
+    <Content Include="Assets\app\scripts\controllers\restaurant.js" />
+    <Content Include="Assets\app\scripts\models\model.js" />
     <Content Include="Assets\app\robots.txt" />
+    <Content Include="Assets\app\scripts\config.js" />
     <Content Include="Assets\app\scripts\app.js" />
+    <Content Include="Assets\app\scripts\controllers\dashboard.js" />
     <Content Include="Assets\app\scripts\controllers\operations.js" />
     <Content Include="Assets\app\scripts\controllers\about.js" />
     <Content Include="Assets\app\scripts\controllers\controllers.js" />
     <Content Include="Assets\app\scripts\controllers\main.js" />
     <Content Include="Assets\app\scripts\filters\filters.js" />
+    <Content Include="Assets\app\scripts\controllers\root.js" />
+    <Content Include="Assets\app\scripts\services\dashboardService.js" />
     <Content Include="Assets\app\scripts\services\operationsService.js" />
     <Content Include="Assets\app\scripts\services\carService.js" />
     <Content Include="Assets\app\scripts\services\scrollService.js" />
+    <Content Include="Assets\app\scripts\services\mongolabService.js" />
     <Content Include="Assets\app\styles\main.css" />
+    <Content Include="Assets\app\views\dashboard.html" />
+    <Content Include="Assets\app\views\restaurants.html" />
     <Content Include="Assets\app\views\operations.html" />
     <Content Include="Assets\app\views\about.html" />
     <Content Include="Assets\app\views\main.html" />
+    <Content Include="Assets\app\views\partials\popup\popup.html" />
     <Content Include="Assets\Gruntfile.js" />
     <Content Include="Assets\test\karma.conf.js" />
     <Content Include="Assets\test\spec\controllers\about.js" />
@@ -292,6 +304,10 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AppSettings.cs</LastGenOutput>
     </Content>
+    <Content Include="Assets\app\i18n\en\myresources1.json" />
+    <Content Include="Assets\app\i18n\en\myresources2.json" />
+    <Content Include="Assets\app\i18n\de\myresources1.json" />
+    <Content Include="Assets\app\i18n\de\myresources2.json" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
