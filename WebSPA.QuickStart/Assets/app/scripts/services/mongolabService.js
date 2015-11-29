@@ -50,15 +50,13 @@ angular.module('assetsApp')
 
             service.addRestaurant = function (restaurant) {
                 if (restaurant.name) {
-                    var workoutToSave = angular.copy(restaurant);
-                    workoutToSave.exercises = workoutToSave.exercises.map(function (exercise) { return { name: exercise.details.name, duration: exercise.duration } });
-                    workoutToSave._id = workoutToSave.name;
-                    return $http.post(collectionsUrl + "/restaurants", workoutToSave)
+                    var restaurantToSave = angular.copy(restaurant);
+                    return $http.post(collectionsUrl + "/restaurants", restaurantToSave)
                                 .then(function (response) {
-                                    return restaurant
+                                    return restaurant;
                                 });
                 }
-            }
+            };
 
             service.deleteRestaurant = function (restaurantId) {
                 return $http.delete(collectionsUrl + "/restaurants/" + restaurantId);

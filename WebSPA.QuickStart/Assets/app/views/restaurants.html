@@ -5,11 +5,24 @@
         This page use Mongolab Api to retrieve data.
     </div>
 
+    <div class="row voffsettopbot3">
+        <p class="text-center" ng-hide="vm.dataLoaded">
+            <i class="fa fa-spinner fa-spin fa-4x"></i>
+        </p>
+        <div id="grid1"
+             ng-class="vm.dataLoaded? 'grid showgrid' : 'grid hidegrid'"
+             ui-grid="{ data: vm.restaurants }" />
 
-    <div class="row voffset3">        
-        <div id="grid1" ui-grid="{ data: vm.restaurants }" class="grid"></div>
+        <label>Count: #{{vm.restaurants.length}}</label>
     </div>
 
+    <div class="row voffsettopbot3">
+        <button class="btn btn-primary" ng-click="vm.showRestaurant()">Add restaurant</button>
+    </div>
+
+    <!--<div ng-class="vm.dataLoaded? 'row voffset3 showgrid' : 'row voffset3 hidegrid'">HIII !</div>-->
+
+    <!--<pre>{{vm.dataLoaded | json}}</pre>-->
     <!--<pre>{{vm.restaurants | json}}</pre>-->
 
 </div>

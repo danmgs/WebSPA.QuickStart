@@ -23,8 +23,15 @@ angular
         'adf',
         'LocalStorageModule',
         'pascalprecht.translate',
+        'lumx',
         'myDashboardModule'
     ]);
 
 angular
     .module('myDashboardModule', []);
+
+Date.prototype.formatMMDDYYYY = function () {
+    return (this.getMonth() + 1) +
+    "/" + this.getDate() +
+    "/" + this.getFullYear();
+}

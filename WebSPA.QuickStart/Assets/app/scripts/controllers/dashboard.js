@@ -19,6 +19,7 @@ angular.module('myDashboardModule', ['adf', 'adf.structures.base', 'adf.widget.c
     var name = 'My_Dashboard_Name';
     var model = localStorageService.get(name);
     if (!model) {
+        console.log("My_Dashboard_Name !model");
         // set default model for demo purposes
         model = {
             title: "My Dashboard Name" + new Date(),

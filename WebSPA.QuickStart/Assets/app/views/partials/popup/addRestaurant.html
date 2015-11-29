@@ -1,0 +1,28 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">Add a restaurant</h3>
+</div>
+<div class="modal-body voffset3">
+    <div flex-container="row" flex-gutter="24">
+
+        <div flex-item>
+            <lx-text-field label="Name">
+                <input type="text" ng-model="newrestaurant.name">
+            </lx-text-field>
+        </div>
+
+        <div flex-item>
+            <lx-text-field label="Borough">
+                <input type="text" ng-model="newrestaurant.borough">
+            </lx-text-field>
+        </div>
+
+        <div flex-item>
+            <lx-text-field label="Cuisine">
+                <input type="text" ng-model="newrestaurant.cuisine">
+            </lx-text-field>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="addRestaurant()">OK</button>
+</div>

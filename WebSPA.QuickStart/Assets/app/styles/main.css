@@ -88,6 +88,14 @@ body {
     height: 350px;
     }
 
+.hidegrid {
+    visibility: hidden;
+}
+
+.showgrid {
+    visibility: visible;
+}
+
 .voffset  { margin-top: 2px; }
 .voffset1 { margin-top: 5px; }
 .voffset2 { margin-top: 10px; }
@@ -98,6 +106,11 @@ body {
 .voffset7 { margin-top: 80px; }
 .voffset8 { margin-top: 100px; }
 .voffset9 { margin-top: 150px; }
+
+.voffsettopbot  { margin: 2px 0px; }
+.voffsettopbot1 { margin: 5px 0px; }
+.voffsettopbot2 { margin: 10px 0px; }
+.voffsettopbot3 { margin: 15px 0px; }
 
 .myborder{
     border:solid 1px black;

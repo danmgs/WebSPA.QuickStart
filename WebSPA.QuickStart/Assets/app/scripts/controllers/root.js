@@ -3,7 +3,7 @@
 angular.module('assetsApp')
   .controller('RootController', ['$scope', '$uibModal', '$translate', '$location', function ($scope, $uibModal, $translate, $location) {
       $scope.showWorkoutHistory = function () {
-          var dailog = $uibModal.open({
+          var dialog = $uibModal.open({
               templateUrl: 'views/partials/popup/popup.html',
               controller: PopupController,
               size: 'lg'
@@ -42,7 +42,7 @@ angular.module('assetsApp')
 
       $scope.navClass = function (page) {
           var currentRoute = $location.path().substring(1) || 'home';
-          console.log(currentRoute);
+          //console.log(currentRoute);
           return page === currentRoute || new RegExp(page).test(currentRoute) ? 'active' : '';
       };
       

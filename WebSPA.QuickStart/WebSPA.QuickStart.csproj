@@ -224,6 +224,7 @@
     <Content Include="Assets\app\scripts\services\mongolabService.js" />
     <Content Include="Assets\app\styles\main.css" />
     <Content Include="Assets\app\views\dashboard.html" />
+    <Content Include="Assets\app\views\partials\popup\addRestaurant.html" />
     <Content Include="Assets\app\views\restaurants.html" />
     <Content Include="Assets\app\views\operations.html" />
     <Content Include="Assets\app\views\about.html" />
