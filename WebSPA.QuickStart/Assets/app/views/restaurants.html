@@ -2,7 +2,10 @@
 <div class="container">
 
     <div class="row">
-        This page use Mongolab Api to retrieve data.
+        <h1 ng-bind-html="'RESTAURANT.TITLE'|translate"></h1>
+    </div>
+
+    <div class="row" ng-bind-html="'RESTAURANT.DESC'|translate">
     </div>
 
     <div class="row voffsettopbot3">
@@ -17,12 +20,19 @@
     </div>
 
     <div class="row voffsettopbot3">
-        <button class="btn btn-primary" ng-click="vm.showRestaurant()">Add restaurant</button>
+        <button class="btn btn-primary" ng-click="vm.showRestaurant()" ng-bind-html="'RESTAURANT.ADD_RESTAURANT'|translate"></button>
+    </div>
+
+    <div class="row voffsettopbot3">
+        <label>{{ 'RESTAURANT.SEARCH'|translate }}</label> <input type="text" class="sfTypeahead" options="vm.exampleOptions" datasets="vm.exampleData" ng-model="vm.resultSearchSelected">
     </div>
 
     <!--<div ng-class="vm.dataLoaded? 'row voffset3 showgrid' : 'row voffset3 hidegrid'">HIII !</div>-->
 
     <!--<pre>{{vm.dataLoaded | json}}</pre>-->
     <!--<pre>{{vm.restaurants | json}}</pre>-->
+    <!--<pre>{{vm.numbers.local | json}}</pre>-->    
+    <!--<pre>{{vm.resultSearchSelected | json}}</pre>-->    
+    
 
 </div>

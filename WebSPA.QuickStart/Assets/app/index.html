@@ -54,8 +54,8 @@
                         <li ng-class="navClass('dashboard')"><a ng-href="#/dashboard">Dashboard</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a ng-click="setLanguage('en')" title="{{'TOPNAV.ENGLISH'|translate}}" ng-class="{'btn-primary':language==='en'}"><img src="images/flag-usa.gif" alt="English" /></a></li>
-                        <li><a ng-click="setLanguage('de')" title="{{'TOPNAV.GERMAN'|translate}}" ng-class="{'btn-primary':language==='de'}"><img src="images/flag-germany.gif" alt="German" /></a></li>
+                        <li><a ng-click="setLanguage('en')" title="{{'TOPNAV.ENGLISH'|translate}}" ng-class="{'btn-primary':language==='en'}"><img src="images/flag-usa.gif" alt="Eng" /></a></li>
+                        <li><a ng-click="setLanguage('fr')" title="{{'TOPNAV.FRENCH'|translate}}" ng-class="{'btn-primary':language==='fr'}"><img src="images/flag-fr.gif" alt="Fr" /></a></li>
                         <li><a ng-click="showWorkoutHistory()" title="{{'TOPNAV.HISTORYTITLE'|translate}}">{{'TOPNAV.HISTORY'|translate}}</a></li>
                     </ul>
                 </div>
@@ -70,6 +70,10 @@
     <div class="footer">
         <div class="container">
             <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+
+            <button class="btn btn--m btn--black btn--flat" ng-click="opendDialog('test')" lx-ripple>More informations ...</button>
+
+            <div ng-include src="'views/partials/popup/footer.html'"></div>
         </div>
     </div>
 
@@ -120,12 +124,15 @@
     <script src="bower_components/velocity/velocity.js"></script>
     <script src="bower_components/velocity/velocity.ui.js"></script>
     <script src="bower_components/lumx/dist/lumx.js"></script>
+    <script src="bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
+    <script src="bower_components/angular-typeahead/angular-typeahead.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/config.js"></script>
+    <script src="scripts/utils.js"></script>    
     <script src="scripts/services/operationsService.js"></script>
     <script src="scripts/services/carService.js"></script>
     <script src="scripts/services/scrollService.js"></script>

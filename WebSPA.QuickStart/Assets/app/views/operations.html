@@ -2,13 +2,18 @@
 <div class="container">
 
     <div class="row">
-        This page use a WEB API Api to retrieve data. Ensure the Web server is started.
+        <h1 ng-bind-html="'OPERATIONS.TITLE'|translate"></h1>
+    </div>
+
+    <div class="row" ng-bind-html="'OPERATIONS.DESC'|translate">
     </div>
 
     <div class="row voffset3">
-        <div class="col-md-4 btn btn-primary" ng-click="vm.generateData()" ng-show="vm.countData > 0">Generate &amp; store random data</div>
-        <div class="col-md-4"><input type="text" ng-model="vm.countData" /></div>
-        <span ng-class="{'col-md-4 label label-success': vm.status, 'col-md-4 label label-danger': !vm.status}">{{vm.statuslbl}}</span>
+        <div class="col-md-6 btn btn-primary" ng-click="vm.generateData()" ng-show="vm.countData > 0" ng-bind-html="'OPERATIONS.GENERATE_DATA'|translate"></div>
+        <div class="col-md-2"><input type="text" ng-model="vm.countData" /></div>
+    </div>
+    <div class="row voffset1">
+        <span ng-class="{'col-md-12 label label-success': vm.status, 'col-md-4 label label-danger': !vm.status}">{{vm.statuslbl}}</span>
     </div>
     <div class="row voffset3">
         <div class="col-md-12 myborder">
@@ -27,7 +32,7 @@
         <canvas id="line" ng-show="vm.showChart" class="chart chart-line" chart-data="vm.data" chart-labels="vm.labels"
                 chart-legend="true" chart-series="vm.series" chart-click="vm.onClick"></canvas>
 
-        <div class="col-md-12 btn btn-warning voffset3" ng-click="vm.deleteAll()">Delete All Data</div>
+        <div class="col-md-12 btn btn-warning voffset3" ng-click="vm.deleteAll()" ng-bind-html="'OPERATIONS.DELETE_ALL'|translate"></div>
     </div>
 
 

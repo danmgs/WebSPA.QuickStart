@@ -42,6 +42,9 @@ angular.module('assetsApp')
                     $rootScope.$broadcast(appEvents.restaurant.added, 'myarg');
                 });                
             };
+            $scope.cancel = function () {
+                $modalInstance.close();
+            };
         };
         PopupController['$inject'] = ['$rootScope', '$scope', '$modalInstance', 'Restaurant'];
 
@@ -59,12 +62,67 @@ angular.module('assetsApp')
             init();
         });
 
+        // ---------------- Search Engine ----------------
+
+        // Instantiate the bloodhound suggestion engine
+        var searchRestaurantsList = new Bloodhound({
+            datumTokenizer: function (d) { return Bloodhound.tokenizers.whitespace(d.name); },
+            queryTokenizer: Bloodhound.tokenizers.whitespace,
+            local: [
+              // default list items
+              //{ name: 'one' },
+              //{ name: 'two' },
+              //{ name: 'three' },
+              //{ name: 'four' },
+              //{ name: 'five' },
+              //{ name: 'six' },
+              //{ name: 'seven' },
+              //{ name: 'eight' },
+              //{ name: 'nine' },
+              //{ name: 'ten' }
+            ]
+        });
+
+        // Allows the addition of local datum
+        // values to a pre-existing bloodhound engine.
+        vm.addValue = function (data) {
+            angular.forEach(data, function (value, key) {
+                searchRestaurantsList.add(value);
+            });
+        };
+
+        // Typeahead options object
+        vm.exampleOptions = {
+            highlight: true
+        };
+
+        // Single dataset example
+        vm.exampleData = {
+            displayKey: 'name',
+            source: searchRestaurantsList.ttAdapter()
+        };
+
+        vm.resultSearchSelected = null;
+
+        $scope.$watch("vm.resultSearchSelected", function (value) {
+            if (value != null && value != '') {
+                console.log('You choose ' + vm.resultSearchSelected);
+            }
+        });
+
+        // ---------------- Search Engine ----------------
+
+
         function init() {
 
             vm.dataLoaded = false;
 
+            // initialize the bloodhound suggestion engine
+            searchRestaurantsList.initialize();
+
             mongolabService.getRestaurants().then(function (data) {
                 vm.restaurants = data;
+                vm.addValue(data);
                 
                 $timeout(function () {
                     vm.dataLoaded = true;

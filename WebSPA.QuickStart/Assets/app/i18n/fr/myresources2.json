@@ -1,0 +1,22 @@
+{
+    "TOPNAV": {
+        "HISTORY": "Historique",
+        "HISTORYTITLE": "Workout Geschichte",
+        "ENGLISH": "Anglais",
+        "FRENCH": "Français"
+    },
+    "RESTAURANT": {
+        "TITLE": "O&ugrave voulez vous manger ?",
+        "DESC": "Cette page utilise l'API Mongolab pour r&eacute;cup&eacute;rer les donn&eacute;es.",
+        "ADD_RESTAURANT": "Ajouter un nouveau restaurant",
+        "CANCEL_ADD": "Annuler",
+        "ADD": "Ajouter",
+        "SEARCH": "Recherche par nom :"
+    },
+	"OPERATIONS" : {
+        "TITLE": "Mes Operations",
+        "DESC": "Cette page utilise un service WEB API pour r&eacute;cup&eacute;rer des donn&eacute;es. Assurez-vous que le service soit d&eacute;marr&eacute; c&ocirc;t&eacute; server.",
+        "GENERATE_DATA": "G&eacute;n&eacute;rer des donn&eacute;es al&eacute;atoires",
+        "DELETE_ALL": "Supprimer toutes les donn&eacute;es"
+	}
+}

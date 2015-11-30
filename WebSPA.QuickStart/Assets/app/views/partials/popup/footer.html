@@ -1,0 +1,50 @@
+﻿<lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="closingDialog()" onscrollend="scrollEndDialog()">
+    <div class="dialog__header">
+        <div class="toolbar bgc-light-blue-500 pl++">
+            <span class="toolbar__label tc-white fs-title">
+                {{ project.Title }}
+            </span>
+
+            <div class="toolbar__right">
+                <button class="btn btn--l btn--white btn--icon" lx-ripple ng-click="addPerson()">
+                    <i class="mdi mdi-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dialog__content">
+        <lx-tabs links-tc="light" links-bgc="light-blue-500" indicator="yellow-500" no-divider="true" layout="inline">
+            <lx-tab heading="The Project">
+                <div class="p++">
+                    {{ project.Desc }}
+                </div>
+            </lx-tab>
+
+            <lx-tab heading="Technologies">
+                <div class="p+">
+                    <p>Technologies used</p>
+
+                    <div ng-repeat="t in technologies">
+                        {{ t.Name }} - {{ t.Desc }}
+                    </div>
+                </div>
+            </lx-tab>
+
+            <lx-tab heading="Team Members">
+                <div class="p+">
+                    <p>Credits</p>
+
+                    <div ng-repeat="m in teamMembers">
+                        {{ m.Name }} - {{ m.Job }}
+                    </div>
+                </div>
+            </lx-tab>
+        </lx-tabs>
+    </div>
+
+    <div class="dialog__actions">
+        <button class="btn btn--m btn--black btn--flat" lx-ripple lx-dialog-close>Cancel</button>
+        <button class="btn btn--m btn--black btn--flat" lx-ripple lx-dialog-close>Close</button>
+    </div>
+</lx-dialog>

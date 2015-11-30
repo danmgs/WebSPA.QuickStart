@@ -24,14 +24,9 @@ angular
         'LocalStorageModule',
         'pascalprecht.translate',
         'lumx',
+        'siyfion.sfTypeahead',
         'myDashboardModule'
     ]);
 
 angular
     .module('myDashboardModule', []);
-
-Date.prototype.formatMMDDYYYY = function () {
-    return (this.getMonth() + 1) +
-    "/" + this.getDate() +
-    "/" + this.getFullYear();
-}

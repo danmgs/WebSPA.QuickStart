@@ -1,7 +1,7 @@
 ﻿'use strict';
 
 angular.module('assetsApp')
-  .controller('RootController', ['$scope', '$uibModal', '$translate', '$location', function ($scope, $uibModal, $translate, $location) {
+  .controller('RootController', ['$scope', '$uibModal', '$translate', '$location', 'LxDialogService', 'LxNotificationService', function ($scope, $uibModal, $translate, $location, LxDialogService, LxNotificationService) {
       $scope.showWorkoutHistory = function () {
           var dialog = $uibModal.open({
               templateUrl: 'views/partials/popup/popup.html',
@@ -45,6 +45,27 @@ angular.module('assetsApp')
           //console.log(currentRoute);
           return page === currentRoute || new RegExp(page).test(currentRoute) ? 'active' : '';
       };
+
+      $scope.opendDialog = function (dialogId) {
+          LxDialogService.open(dialogId);
+      };
+
+      $scope.closingDialog = function () {
+          LxNotificationService.info('Dialog closed!');
+      };
+
+      $scope.project = {
+          Title: 'WebSPA.QuickStart' + new Date().getFullYear(),
+          Desc: 'WebSPA.QuickStart is a simple Web Application using AngularJS and MongoDb - ' + new Date().getFullYear()
+      }
+
+      $scope.teamMembers = [
+          { Name: 'Daniel NGUYEN', Job: 'Developping your app.' }];
+
+      $scope.technologies = [
+          { Name: 'Yeoman', Desc: 'Scaffolding your apps.' },
+          { Name: 'AngularJS', Desc: 'Great great web apps.' },
+          { Name: 'MongoDb', Desc: 'Storing your data.' }];
       
       var init = function () {
           $scope.language = $translate.preferredLanguage();
