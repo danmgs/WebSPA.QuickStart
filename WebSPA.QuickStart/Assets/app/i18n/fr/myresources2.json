@@ -18,5 +18,18 @@
         "DESC": "Cette page utilise un service WEB API pour r&eacute;cup&eacute;rer des donn&eacute;es. Assurez-vous que le service soit d&eacute;marr&eacute; c&ocirc;t&eacute; server.",
         "GENERATE_DATA": "G&eacute;n&eacute;rer des donn&eacute;es al&eacute;atoires",
         "DELETE_ALL": "Supprimer toutes les donn&eacute;es"
-	}
+	},
+    "CUSTOMERS": {
+        "TITLE": "Vous connaitre ..",
+        "DESC": "Cette page utilise angular wizard.",
+        "STEP1": { 
+            "NAME":  "Au sujet de vous"
+        },
+        "STEP2": {
+            "NAME": "Votre plat prefere ?"
+        },
+        "STEP3": { 
+            "NAME":  "Fini !"
+        }
+    }
 }

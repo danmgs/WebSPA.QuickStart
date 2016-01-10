@@ -115,3 +115,15 @@ body {
 .myborder{
     border:solid 1px black;
 }  
+
+.customer.container .wizard {
+    margin: 30px 0px;
+}
+
+.customer.container .wizard div.content {
+    height: 500px;
+} 
+
+.customer.container .wizard input[type="submit"] {
+    margin: 50px 0px;
+} 

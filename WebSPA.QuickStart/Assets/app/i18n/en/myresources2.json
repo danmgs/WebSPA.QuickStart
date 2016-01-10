@@ -7,16 +7,29 @@
     },
     "RESTAURANT": {
         "TITLE": "Where do you want to eat ?",
-        "DESC": "This page use Mongolab API to retrieve data.",
+        "DESC": "This page uses Mongolab API to retrieve data.",
         "ADD_RESTAURANT": "Add a new restaurant",
         "CANCEL_ADD": "Cancel",
         "ADD": "Add",
         "SEARCH": "Search by name :"
     },
-	"OPERATIONS" : {
+    "OPERATIONS": {
         "TITLE": "My Operations",
-        "DESC": "This page use a WEB API Services to retrieve data. Ensure the Web service is started on server-side.",
+        "DESC": "This page uses a WEB API Services to retrieve data. Ensure the Web service is started on server-side.",
         "GENERATE_DATA": "Generate random data",
         "DELETE_ALL": "Delete all data"
-	}
+    },
+    "CUSTOMERS": {
+        "TITLE": "We want to know more about you !",
+        "DESC": "This page is built using an angular wizard.",
+        "STEP1": { 
+            "NAME":  "More about you"
+        },
+        "STEP2": {
+            "NAME": "What are your fav type of food ?"
+        },
+        "STEP3": { 
+            "NAME":  "We finish !"
+        }
+    }
 }

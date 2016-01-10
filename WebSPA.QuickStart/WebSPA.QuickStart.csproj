@@ -185,6 +185,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Common\Enums.cs" />
     <Compile Include="Common\RandomGenerator.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\GarageController.cs" />
     <Compile Include="Controllers\OperationController.cs" />
@@ -192,6 +193,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Operation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -205,8 +207,10 @@
     <Content Include="Assets\app\images\flag-usa.gif" />
     <Content Include="Assets\app\images\yeoman.png" />
     <Content Include="Assets\app\index.html" />
+    <Content Include="Assets\app\scripts\controllers\customers.js" />
+    <Content Include="Assets\app\scripts\services\customerService.js" />
     <Content Include="Assets\app\scripts\utils.js" />
-    <Content Include="Assets\app\scripts\controllers\restaurant.js" />
+    <Content Include="Assets\app\scripts\controllers\restaurants.js" />
     <Content Include="Assets\app\scripts\models\model.js" />
     <Content Include="Assets\app\robots.txt" />
     <Content Include="Assets\app\scripts\config.js" />
@@ -224,6 +228,7 @@
     <Content Include="Assets\app\scripts\services\scrollService.js" />
     <Content Include="Assets\app\scripts\services\mongolabService.js" />
     <Content Include="Assets\app\styles\main.css" />
+    <Content Include="Assets\app\views\customers.html" />
     <Content Include="Assets\app\views\dashboard.html" />
     <Content Include="Assets\app\views\partials\popup\addRestaurant.html" />
     <Content Include="Assets\app\views\partials\popup\footer.html" />

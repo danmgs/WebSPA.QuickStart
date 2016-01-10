@@ -30,6 +30,14 @@ namespace WebSPA.QuickStart
                 return Database.GetCollection<Operation>("operation");
             }
         }
+
+        public IMongoCollection<Customer> Customers
+        {
+            get
+            {
+                return Database.GetCollection<Customer>("customers");
+            }
+        }
 	}
 }
 

@@ -1,0 +1,60 @@
+<div class="customer container">
+
+    <div class="row">
+        <h1 ng-bind-html="'CUSTOMERS.TITLE'|translate"></h1>
+    </div>
+
+    <div class="row" ng-bind-html="'CUSTOMERS.DESC'|translate">
+    </div>
+
+    <wizard class="wizard" on-finish="vm.submitform()">
+        <wz-step title="Starting">
+            <div class="content">
+                <h1>This is the first step</h1>
+                <p>
+                    <div flex-container="column" flex-gutter="24">
+                        <div flex-item>
+                            <lx-text-field label="Firstname">
+                                <input type="text" ng-model="vm.step1.firstname">
+                            </lx-text-field>
+                        </div>
+                        <div flex-item>
+                            <lx-text-field label="Lastname">
+                                <input type="text" ng-model="vm.step1.lastname">
+                            </lx-text-field>
+                        </div>
+                        <div flex-item>
+                            <lx-text-field label="Age">
+                                <input type="text" ng-model="vm.step1.age">
+                            </lx-text-field>
+                        </div>
+                    </div>
+                </p>
+            </div>
+            <button class="btn btn--m btn--blue btn--raised" wz-next lx-ripple>Continue</button>
+        </wz-step>
+        <wz-step title="Continuing">
+            <div class="content">
+                <h1>This is the 2nd step</h1>
+                <p>
+                    <div flex-container="column" flex-gutter="24">
+                        <div flex-item>
+                            <lx-text-field label="Your favorite food">
+                                <input type="text" ng-model="vm.step2.favfood">
+                            </lx-text-field>
+                        </div>
+                    </div>
+                </p>
+            </div>
+            <button class="btn btn--m btn--blue btn--raised" wz-next lx-ripple>Continue</button>
+        </wz-step>
+        <wz-step title="More steps">
+            <div class="content">
+                <p>Even more steps!!</p>
+            </div>
+
+            <button class="btn btn--m btn--blue btn--raised" wz-next lx-ripple>Finish</button>
+        </wz-step>
+    </wizard>
+
+</div>

@@ -14,10 +14,10 @@ angular.module('assetsApp')
 (function () {
     'use strict';
 
-    var controllerId = 'RestaurantCtrl';
-    angular.module('assetsApp').controller(controllerId, ['$rootScope', '$scope', '$http', '$uibModal', 'mongolabService', '$timeout', 'appEvents', RestaurantCtrl]);
+    var controllerId = 'RestaurantsCtrl';
+    angular.module('assetsApp').controller(controllerId, ['$rootScope', '$scope', '$http', '$uibModal', 'mongolabService', '$timeout', 'appEvents', RestaurantsCtrl]);
 
-    function RestaurantCtrl($rootScope, $scope, $http, $uibModal, mongolabService, $timeout, appEvents) {
+    function RestaurantsCtrl($rootScope, $scope, $http, $uibModal, mongolabService, $timeout, appEvents) {
         var vm = this;
 
         vm.dataLoaded = false;

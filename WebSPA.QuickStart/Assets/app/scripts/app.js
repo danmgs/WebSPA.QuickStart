@@ -25,7 +25,8 @@ angular
         'pascalprecht.translate',
         'lumx',
         'siyfion.sfTypeahead',
-        'myDashboardModule'
+        'myDashboardModule',
+        'mgo-angular-wizard'
     ]);
 
 angular

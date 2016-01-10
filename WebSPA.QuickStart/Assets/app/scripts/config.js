@@ -33,7 +33,12 @@ angular.module('assetsApp')
             })
             .when('/restaurants', {
                 templateUrl: 'views/restaurants.html',
-                controller: 'RestaurantCtrl',
+                controller: 'RestaurantsCtrl',
+                controllerAs: 'vm'
+            })
+            .when('/customers', {
+                templateUrl: 'views/customers.html',
+                controller: 'CustomersCtrl',
                 controllerAs: 'vm'
             })
             .otherwise({

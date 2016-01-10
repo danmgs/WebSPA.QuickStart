@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.css" />
     <link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.min.css" />
     <link rel="stylesheet" href="bower_components/lumx/dist/lumx.css" />
+    <link rel="stylesheet" href="bower_components/angular-wizard/dist/angular-wizard.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -51,6 +52,7 @@
                         <!--<li ng-class="navClass('about')"><a ng-href="#/about">About</a></li>  hidden-->
                         <li ng-class="navClass('myoperations')"><a ng-href="#/myoperations">My Operations</a></li>
                         <li ng-class="navClass('restaurants')"><a ng-href="#/restaurants">Restaurants</a></li>
+                        <li ng-class="navClass('customers')"><a ng-href="#/customers">Customers</a></li>
                         <li ng-class="navClass('dashboard')"><a ng-href="#/dashboard">Dashboard</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -126,6 +128,7 @@
     <script src="bower_components/lumx/dist/lumx.js"></script>
     <script src="bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
     <script src="bower_components/angular-typeahead/angular-typeahead.js"></script>
+    <script src="bower_components/angular-wizard/dist/angular-wizard.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -135,9 +138,10 @@
     <script src="scripts/utils.js"></script>    
     <script src="scripts/services/operationsService.js"></script>
     <script src="scripts/services/carService.js"></script>
+    <script src="scripts/services/customerService.js"></script>
     <script src="scripts/services/scrollService.js"></script>
     <script src="scripts/services/dashboardService.js"></script>
-    <script src="scripts/services/mongolabService.js"></script>    
+    <script src="scripts/services/mongolabService.js"></script>
 
     <script src="scripts/controllers/root.js"></script>
     <script src="scripts/controllers/main.js"></script>
@@ -145,7 +149,9 @@
     <script src="scripts/controllers/controllers.js"></script>
     <script src="scripts/controllers/operations.js"></script>
     <script src="scripts/controllers/dashboard.js"></script>
-    <script src="scripts/controllers/restaurant.js"></script>    
+    <script src="scripts/controllers/restaurants.js"></script>    
+    <script src="scripts/controllers/customers.js"></script>
+    
 
     <script src="scripts/models/model.js"></script>
 
