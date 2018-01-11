@@ -3,8 +3,8 @@
 
 ## Prerequisites
 
-* Install Nodejs
-* Launch node.js console to install grunt-cli and bower, using command :
+* Install Node.js
+* Launch nNde.js console to install grunt-cli and bower, using command :
 
 ```
 npm install -g grunt-cli bower
